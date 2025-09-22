@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Luzes de Setembro Amarelo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="menuBg">
+    <div class="layer sky"></div>
+    <div class="layer sun"></div>
+    <div class="layer hills hills-back"></div>
+    <div class="layer hills hills-mid"></div>
+    <div class="layer hills hills-front"></div>
+    <div class="cloud c1"></div>
+    <div class="cloud c2"></div>
+    <div class="cloud c3"></div>
+    <div class="cloud c4"></div>
+  </div>
+
+  <div id="menu" class="panel fade-in">
+    <h1 class="title">Luzes de Setembro Amarelo</h1>
+    <p class="subtitle">Um pequeno jogo sobre acolhimento, coragem e esperança</p>
+    <div class="menu-actions">
+      <button id="btnPlay" class="btn primary">Jogar</button>
+      <button id="btnAbout" class="btn">Sobre</button>
+    </div>
+    <div class="menu-sep"></div>
+    <p class="menu-hint small">← → mover • Espaço pular • X correr</p>
+  </div>
+
+  <!-- Seleção de personagem -->
+  <div id="charSelect" class="panel" style="display:none;">
+    <h2>Escolha seu personagem</h2>
+    <div class="char-grid" style="grid-template-columns: 1fr;">
+      <button class="char-card" data-char="cloe" aria-label="Cloe">
+        <div class="pixel cloe"></div>
+        <div class="char-name">Cloe 🟡</div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Jogo -->
+  <div id="gameWrap" style="display:none;">
+    <canvas id="game" width="900" height="540"></canvas>
+    <div class="hud">
+      <div class="hud-section">
+        <span class="hud-label">Pétalas:</span>
+        <span id="petalCount">0</span>
+      </div>
+      <div class="hud-section">
+        <span class="hud-label">Fase:</span>
+        <span id="stageLabel">1/3</span>
+      </div>
+    </div>
+    <div id="finalMessage" class="final-msg" style="display:none;"></div>
+    <div id="message" class="msg"></div>
+    <div class="hint">← → mover • Espaço pular • X correr</div>
+  </div>
+
+  <!-- Modal Sobre -->
+  <div id="aboutModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button id="closeAbout" class="close">×</button>
+      <h2>Sobre o Setembro Amarelo</h2>
+      <p>
+        Setembro Amarelo é um movimento de conscientização sobre saúde mental. A proposta é abrir espaço para conversas honestas, acolhedoras e sem julgamentos. Falar do que dói é um ato de coragem — e ouvir com respeito também é. O silêncio não precisa ser um destino: pedir ajuda é um gesto de amor por você e por quem te quer bem.
+      </p>
+      <p>
+        Ninguém é fraco por sentir medo, tristeza ou ansiedade. Ao contrário: reconhecer limites é sinal de sabedoria. Dias difíceis não definem quem você é — e não duram para sempre. Há cuidado possível, há tratamento, há caminhos. Você não está só.
+      </p>
+      <p>
+        Se você estiver passando por um momento delicado, procure alguém de confiança ou apoio profissional. No Brasil, você pode falar com o Centro de Valorização da Vida (CVV): ligue 188 (24h) ou acesse cvv.org.br. Falar ajuda, e você importa.
+      </p>
+      <blockquote>
+        Dica: ao acolher alguém, troque “não fica assim” por “estou aqui, podemos atravessar isso juntos”.
+      </blockquote>
+    </div>
+  </div>
+
+  <!-- Sons -->
+  <audio id="sndMenu" src="menu-fundo.mp3" loop></audio>
+  <audio id="sndJump" src="jump.mp3"></audio>
+  <audio id="sndDash" src="dash.mp3"></audio>
+  <audio id="sndCollect" src="collet.mp3"></audio>
+  <audio id="sndExplosion" src="explosion.mp3"></audio>
+
+  <script src="game.js"></script>
+</body>
+</html>
