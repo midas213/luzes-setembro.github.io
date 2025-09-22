@@ -35,7 +35,7 @@ O jogador controla **Cloe**, percorrendo cenários e coletando pétalas douradas
 ## 📸 Prévia
 
 <p align="center">
-  <!-- troque os links abaixo por imagens do repositório -->
+  <!-- Substitua pelos prints do seu jogo -->
   <img src="screenshot1.png" width="400px" />
   <img src="screenshot2.png" width="400px" />
 </p>
